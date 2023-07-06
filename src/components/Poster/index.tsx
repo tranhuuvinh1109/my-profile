@@ -38,7 +38,7 @@ const Poster: FC = () => {
 		<div id='poster' className="flex flex-col justify-center">
 			<Container className="relative z-10">
 				<h1 className='name'>Tran Huu Vinh</h1>
-				<p className='work flex'>I'm <TypingEffect /></p>
+				<p className='work flex'>I am <TypingEffect /></p>
 				<div className="social-links mt-10 flex z-50">
 					{
 						socialList.map((item) => {
