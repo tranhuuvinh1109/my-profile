@@ -1,4 +1,8 @@
 export { default as About } from './About'
 export { default as Header } from './Header'
+export { default as Footer } from './Footer'
 export { default as Poster } from './Poster'
 export { default as TypingEffect } from './TypingEffect'
+export { default as Skill } from './Skill'
+export { default as Resume } from './Resume'
+export { default as Portfolio } from './Portfolio'

@@ -5,8 +5,8 @@ const TypingEffect: FC = () => {
 	const typedRef = useRef(null);
 	useEffect(() => {
 		const options = {
-			strings: ['Frontend Developer', 'Backend Developer', 'Photographer'],
-			typeSpeed: 80,
+			strings: ['Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'Photographer'],
+			typeSpeed: 100,
 			backSpeed: 50,
 			loop: true,
 		};

@@ -1,5 +1,5 @@
-import { IconDefinition, faChartBar, faEnvelope, faFile, faUser } from '@fortawesome/free-regular-svg-icons';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faEnvelope, faFile, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faHouse, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FC, MouseEventHandler, useState } from 'react';
 
@@ -11,7 +11,7 @@ type NavItemType = {
 
 const navLists: NavItemType[] = [
 	{
-		href: '#hero',
+		href: '#home',
 		icon: faHouse,
 		label: 'Home',
 	},
@@ -26,12 +26,12 @@ const navLists: NavItemType[] = [
 		label: 'Resume',
 	},
 	{
-		href: '#portfolio',
-		icon: faFile,
-		label: 'Portfolio',
+		href: '#Experience',
+		icon: faPaperclip,
+		label: 'Experience',
 	},
 	{
-		href: '#contact',
+		href: '#footer',
 		icon: faEnvelope,
 		label: 'Contact',
 	},
