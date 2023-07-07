@@ -3,6 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from '@mui/icons-material'
 import Image from 'next/image'
 import amazing from '../../../public/Amazing.png'
+import funnychat from '../../../public/funnychat.png'
+import moment from '../../../public/moment.png'
+import php from '../../../public/projectphp.png'
 
 const Portfolio: FC = () => {
 	return (
@@ -15,7 +18,7 @@ const Portfolio: FC = () => {
 				<Row className='portfolio-container'>
 					<Col lg={4} md={6} className='portfolio-item filter-app mb-10'>
 						<div className="portfolio-wrap">
-							<img src="https://moment-learning.vercel.app/static/media/logo.c91ff9dc94173d493508.png" className="img" alt="" />
+							<Image src={moment} alt='moment' />
 							<div className="portfolio-info">
 								<h4>Moment Learning</h4>
 								<p>Website</p>
@@ -27,7 +30,7 @@ const Portfolio: FC = () => {
 					</Col>
 					<Col lg={4} md={6} className='portfolio-item filter-web'>
 						<div className="portfolio-wrap">
-							<img src="https://vinasupport.com/uploads/2021/01/Laravel-PHP-Framework.png" className="img" alt="" />
+							<Image src={php} alt='php' />
 							<div className="portfolio-info">
 								<h4>BackEnd Moment Learning</h4>
 								<p>Website</p>
@@ -39,7 +42,7 @@ const Portfolio: FC = () => {
 					</Col>
 					<Col lg={4} md={6} className='portfolio-item filter-card'>
 						<div className="portfolio-wrap">
-							<Image src={amazing} alt='Âmzing Trip' />
+							<Image src={amazing} alt='amazing Trip' />
 							<div className="portfolio-info">
 								<h4>Amazing Trip</h4>
 								<p>Website</p>
@@ -51,7 +54,7 @@ const Portfolio: FC = () => {
 					</Col>
 					<Col lg={4} md={6} className='portfolio-item filter-app'>
 						<div className="portfolio-wrap">
-							<img src="https://i.pinimg.com/originals/8b/44/51/8b4451665d6b2139e29f29b51ffb1829.png" className="img" alt="" />
+							<Image src={funnychat} alt='funnychat' />
 							<div className="portfolio-info">
 								<h4>Funny Chat</h4>
 								<p>Website</p>
