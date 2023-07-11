@@ -1,10 +1,28 @@
 import type { NextPage } from 'next'
+import { useEffect } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { About, Footer, Header, Portfolio, Poster, Resume, Skill } from '../src/components'
+import { useDispatch } from 'react-redux';
+import { About, Footer, Header, Experience, Poster, Resume, Skill } from '../src/components'
+import { changeActive } from '../src/redux/reducers/active';
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]');
+      const currentSection = Array.from(sections).find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= 0 && rect.bottom >= 0;
+      });
+      if (currentSection) {
+        dispatch(changeActive(`#${currentSection.id}`))
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +37,7 @@ const Home: NextPage = () => {
         <About />
         <Skill />
         <Resume />
-        <Portfolio />
+        <Experience />
         <Footer />
       </main>
     </div>
@@ -27,3 +45,4 @@ const Home: NextPage = () => {
 }
 
 export default Home
+

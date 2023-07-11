@@ -7,7 +7,7 @@ import { KeyboardArrowRight } from '@mui/icons-material'
 
 const About: FC = () => {
 	return (
-		<div id='about' className='about'>
+		<section id='about' className='about'>
 			<Container>
 				<div className='group-title'>
 					<h2>About</h2>
@@ -46,7 +46,7 @@ const About: FC = () => {
 					</Col>
 				</Row>
 			</Container>
-		</div>
+		</section>
 	)
 }
 

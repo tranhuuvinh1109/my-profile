@@ -36,7 +36,7 @@ const Skill: FC = () => {
 		})
 	}, [skillList])
 	return (
-		<div id='skills' className='skills section-bg'>
+		<section id='skills' className='skills section-bg'>
 			<Container>
 				<div className='group-title'>
 					<h2>Skills</h2>
@@ -76,7 +76,7 @@ const Skill: FC = () => {
 					</Col>
 				</Row>
 			</Container>
-		</div>
+		</section>
 	)
 }
 

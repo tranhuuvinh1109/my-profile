@@ -5,7 +5,7 @@ import { Circle } from '@mui/icons-material';
 
 const Resume: FC = () => {
 	return (
-		<div id='resume' className='resume'>
+		<section id='resume' className='resume'>
 			<Container>
 				<div className='group-title'>
 					<h2>Resume</h2>
@@ -57,7 +57,7 @@ const Resume: FC = () => {
 					</Col>
 				</Row>
 			</Container>
-		</div>
+		</section>
 	)
 }
 

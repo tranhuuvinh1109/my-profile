@@ -2,6 +2,9 @@ import { IconDefinition, faEnvelope, faFile, faUser } from '@fortawesome/free-re
 import { faHouse, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FC, MouseEventHandler, useState } from 'react';
+import { RootState } from '../../redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeActive } from '../../redux/reducers/active';
 
 type NavItemType = {
 	href: string;
@@ -26,7 +29,7 @@ const navLists: NavItemType[] = [
 		label: 'Resume',
 	},
 	{
-		href: '#Experience',
+		href: '#experience',
 		icon: faPaperclip,
 		label: 'Experience',
 	},
@@ -38,9 +41,10 @@ const navLists: NavItemType[] = [
 ]
 
 const Header: FC = () => {
-	const [active, setActive] = useState('#hero');
+	const activeState = useSelector<RootState>(state => state.active.active)
+	const dispatch = useDispatch();
 	const handleClick = (href: string): MouseEventHandler<HTMLLIElement> => () => {
-		setActive(href);
+		dispatch(changeActive(href))
 	};
 	return (
 		<header id='header' className='flex flex-col justify-center'>
@@ -48,7 +52,7 @@ const Header: FC = () => {
 				<ul>
 					{
 						navLists.map((item) => {
-							if (active === item.href) {
+							if (activeState === item.href) {
 								return (
 									<li key={item.label} onClick={handleClick(item.href)}>
 										<a className='nav-item-link active' href={item.href}><FontAwesomeIcon fontSize={14} icon={item.icon} /> <span className='hidden'>{item.label}</span></a>

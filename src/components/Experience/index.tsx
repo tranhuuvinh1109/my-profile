@@ -9,7 +9,7 @@ import php from '../../../public/projectphp.png'
 
 const Portfolio: FC = () => {
 	return (
-		<div id="Experience" className="portfolio section-bg pt-10">
+		<section id="experience" className="portfolio section-bg pt-10">
 			<Container>
 				<div className="group-title">
 					<h2>Experience</h2>
@@ -66,7 +66,7 @@ const Portfolio: FC = () => {
 					</Col>
 				</Row>
 			</Container>
-		</div>
+		</section>
 	)
 }
 

@@ -7,7 +7,7 @@ import { socialList } from '../../const'
 
 const Poster: FC = () => {
 	return (
-		<div id='home' className="flex flex-col justify-center">
+		<section id='home' className="flex flex-col justify-center">
 			<Container className="relative z-10">
 				<h1 className='name'>Tran Huu Vinh</h1>
 				<p className='work flex'>I am <TypingEffect /></p>
@@ -23,7 +23,7 @@ const Poster: FC = () => {
 					}
 				</div>
 			</Container>
-		</div>
+		</section>
 	)
 }
 
