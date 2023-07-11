@@ -22,16 +22,7 @@ const Resume: FC = () => {
 							<p><em>Information technology industry</em></p>
 							<p>GPA: 3.2/4.0</p>
 						</div>
-						<h3 className='resume-title'>Sumary</h3>
-						<div className='resume-item pb-0'>
-							<h4>Brandon Johnson</h4>
-							<p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-							<ul>
-								<li><Circle className='list-icon' />Portland par 127,Orlando, FL</li>
-								<li><Circle className='list-icon' />(123) 456-7891</li>
-								<li><Circle className='list-icon' />alice.barkley@example.com</li>
-							</ul>
-						</div>
+
 
 					</Col>
 					<Col lg={6}>
