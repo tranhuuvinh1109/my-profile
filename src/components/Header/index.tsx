@@ -1,5 +1,5 @@
-import { IconDefinition, faEnvelope, faFile, faUser } from '@fortawesome/free-regular-svg-icons';
-import { faHouse, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faEnvelope, faFile, faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faHouse, faPaperclip, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FC, MouseEventHandler, useState } from 'react';
 import { RootState } from '../../redux/store';
@@ -27,6 +27,16 @@ const navLists: NavItemType[] = [
 		href: '#resume',
 		icon: faFile,
 		label: 'Resume',
+	},
+	{
+		href: '#skill',
+		icon: faKeyboard,
+		label: 'Skill',
+	},
+	{
+		href: '#certificate',
+		icon: faUserGraduate,
+		label: 'Certificate',
 	},
 	{
 		href: '#experience',

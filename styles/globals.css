@@ -175,7 +175,7 @@ a {
 .typed-cursor {
   color: var(--typing) !important;
 }
-.about {
+section {
   padding: 60px 0;
 }
 .group-title h2::before {

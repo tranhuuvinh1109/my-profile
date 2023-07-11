@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useDispatch } from 'react-redux';
-import { About, Footer, Header, Experience, Poster, Resume, Skill } from '../src/components'
+import { About, Footer, Header, Experience, Poster, Resume, Skill, Certificate } from '../src/components'
 import { changeActive } from '../src/redux/reducers/active';
 
 const Home: NextPage = () => {
@@ -35,8 +35,9 @@ const Home: NextPage = () => {
         <Header />
         <Poster />
         <About />
-        <Skill />
         <Resume />
+        <Skill />
+        <Certificate />
         <Experience />
         <Footer />
       </main>
