@@ -477,3 +477,29 @@ section {
   color: #fff;
   text-decoration: none;
 }
+@media (max-width: 480px) {
+  .name {
+    font-size: 34px;
+  }
+  .work {
+    font-size: 20px;
+  }
+  .typing {
+    font-size: 20px;
+  }
+  .icon-link {
+    width: 20px;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+  .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-links a svg {
+    width: 20px;
+  }
+}

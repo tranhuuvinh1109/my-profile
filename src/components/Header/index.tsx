@@ -65,13 +65,13 @@ const Header: FC = () => {
 							if (activeState === item.href) {
 								return (
 									<li key={item.label} onClick={handleClick(item.href)}>
-										<a className='nav-item-link active' href={item.href}><FontAwesomeIcon fontSize={14} icon={item.icon} /> <span className='hidden'>{item.label}</span></a>
+										<a className='nav-item-link active' href={item.href}><FontAwesomeIcon className='icon-link' fontSize={14} icon={item.icon} /> <span className='hidden'>{item.label}</span></a>
 									</li>
 								)
 							}
 							return (
 								<li key={item.label} onClick={handleClick(item.href)}>
-									<a className='nav-item-link' href={item.href}><FontAwesomeIcon fontSize={14} icon={item.icon} /> <span className='hidden'>{item.label}</span></a>
+									<a className='nav-item-link' href={item.href}><FontAwesomeIcon className='icon-link' fontSize={14} icon={item.icon} /> <span className='hidden'>{item.label}</span></a>
 								</li>
 							)
 						})
