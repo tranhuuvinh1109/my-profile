@@ -15,7 +15,7 @@ export const socialList: SocialItemType[] = [
 	},
 	{
 		label: 'Facebook',
-		href: 'https://www.facebook.com/profile.php?id=100081203333837',
+		href: 'https://www.facebook.com/vinhdeveloper2002',
 		icon: faFacebook
 	},
 	{
