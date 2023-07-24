@@ -5,7 +5,7 @@ import { Circle } from '@mui/icons-material';
 
 const Resume: FC = () => {
 	return (
-		<section id='resume' className='resume'>
+		<section id='resume' className='resume' data-aos='fade-left'>
 			<Container>
 				<div className='group-title'>
 					<h2>Resume</h2>

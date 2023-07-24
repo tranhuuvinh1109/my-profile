@@ -6,10 +6,11 @@ import amazing from '../../../public/Amazing.png'
 import funnychat from '../../../public/funnychat.png'
 import moment from '../../../public/moment.png'
 import php from '../../../public/projectphp.png'
+import netflix from '../../../public/netflix.png'
 
 const Portfolio: FC = () => {
 	return (
-		<section id='experience' className='portfolio section-bg pt-10'>
+		<section id='experience' className='portfolio section-bg pt-10' data-aos='fade-left'>
 			<Container>
 				<div className='group-title'>
 					<h2>Experience</h2>
@@ -60,6 +61,18 @@ const Portfolio: FC = () => {
 								<p>Website</p>
 								<div className='portfolio-links'>
 									<a href='https://funny-chat-app.vercel.app/' target='_blank' ><Link /></a>
+								</div>
+							</div>
+						</div>
+					</Col>
+					<Col lg={4} md={6} className='portfolio-item filter-app'>
+						<div className='portfolio-wrap'>
+							<Image src={netflix} alt='netflix' />
+							<div className='portfolio-info'>
+								<h4>NetFlix Clone</h4>
+								<p>Website</p>
+								<div className='portfolio-links'>
+									<a href='https://vinh-netflix.vercel.app/' target='_blank' ><Link /></a>
 								</div>
 							</div>
 						</div>

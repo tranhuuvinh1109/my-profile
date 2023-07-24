@@ -1,13 +1,22 @@
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import Head from 'next/head'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '../styles/Home.module.css'
 import { useDispatch } from 'react-redux';
 import { About, Footer, Header, Experience, Poster, Resume, Skill, Certificate } from '../src/components'
 import { changeActive } from '../src/redux/reducers/active';
+import { motion, useScroll } from "framer-motion";
 
 const Home: NextPage = () => {
   const dispatch = useDispatch()
+  const { scrollYProgress } = useScroll()
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id]');
@@ -22,7 +31,7 @@ const Home: NextPage = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [dispatch]);
+  }, [dispatch])
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +41,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
         <Header />
         <Poster />
         <About />

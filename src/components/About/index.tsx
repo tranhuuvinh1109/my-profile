@@ -7,7 +7,7 @@ import { KeyboardArrowRight } from '@mui/icons-material'
 
 const About: FC = () => {
 	return (
-		<section id='about' className='about'>
+		<section id='about' className='about' data-aos='fade-right'>
 			<Container>
 				<div className='group-title'>
 					<h2>About</h2>

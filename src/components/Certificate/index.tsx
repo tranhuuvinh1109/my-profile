@@ -9,7 +9,7 @@ import Git from '../../../public/GitCertificate.jpg'
 
 const Certificate: FC = () => {
 	return (
-		<section id='certificate' className='pt-10'>
+		<section id='certificate' className='pt-10' data-aos='fade-right'>
 			<Container>
 				<div className='group-title'>
 					<h2>Certificate</h2>

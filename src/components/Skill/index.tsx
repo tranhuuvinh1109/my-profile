@@ -36,7 +36,7 @@ const Skill: FC = () => {
 		})
 	}, [skillList])
 	return (
-		<section id='skill' className='skills section-bg'>
+		<section id='skill' className='skills section-bg' data-aos='fade-left'>
 			<Container>
 				<div className='group-title'>
 					<h2>Skills</h2>
