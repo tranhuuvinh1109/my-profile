@@ -7,6 +7,7 @@ import funnychat from '../../../public/funnychat.png'
 import moment from '../../../public/moment.png'
 import php from '../../../public/projectphp.png'
 import netflix from '../../../public/netflix.png'
+import expressJsFramework from '../../../public/ExpressJsFramework.png'
 
 const Portfolio: FC = () => {
 	return (
@@ -73,6 +74,18 @@ const Portfolio: FC = () => {
 								<p>Website</p>
 								<div className='portfolio-links'>
 									<a href='https://vinh-netflix.vercel.app/' target='_blank' ><Link /></a>
+								</div>
+							</div>
+						</div>
+					</Col>
+					<Col lg={4} md={6} className='portfolio-item filter-app'>
+						<div className='portfolio-wrap'>
+							<Image src={expressJsFramework} alt='Nodejs' />
+							<div className='portfolio-info'>
+								<h4>NodeJS Course</h4>
+								<p>Here is the repository, let me teach basic node js with MVC model to my students</p>
+								<div className='portfolio-links'>
+									<a href='https://github.com/tranhuuvinh1109/learning-nodejs' target='_blank' ><Link /></a>
 								</div>
 							</div>
 						</div>
