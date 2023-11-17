@@ -5,7 +5,6 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { StaticImageData } from "next/image";
 import amazing from "../../public/Amazing.png";
 import funnychat from "../../public/funnychat.png";
 import moment from "../../public/moment.png";
@@ -14,6 +13,7 @@ import netflix from "../../public/netflix.png";
 import traffic from "../../public/traffic.png";
 import cnn from "../../public/cnn.png";
 import expressJsFramework from "../../public/ExpressJsFramework.png";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export type SocialItemType = {
   label: string;
@@ -119,7 +119,7 @@ export const skillList: SkillType[] = [
 export type ProjectType = {
   name: string;
   link: string;
-  image?: StaticImageData | undefined;
+  image: string | StaticImport;
   description?: string;
   dateTime?: string;
 };
