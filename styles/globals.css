@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 :root {
   --bg-color: #13151f;
@@ -31,7 +31,7 @@ a {
   box-sizing: border-box;
 }
 .container {
-  padding: 0 100px;
+  padding: 0 140px;
 }
 @media (max-width: 767px) {
   .container {
@@ -59,7 +59,7 @@ a {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -93,7 +93,6 @@ a {
 }
 
 @media (min-width: 992px) {
-
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -109,7 +108,7 @@ a {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   color: #fff;
   background: #0563bb;
 }
@@ -117,25 +116,27 @@ a {
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   color: #fff;
 }
 
 .nav-menu a:hover,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   width: 100%;
   color: #fff;
 }
 
 .nav-menu a:hover span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   display: block;
 }
 #home {
   width: 100%;
   height: 100vh;
-  background: url(../public/poster.jpg) top right no-repeat;
-  background-size: cover;
+  background: url(../public/bg.jpg) top right no-repeat;
+  /* background-size: cover; */
+  /* background-position: center; */
+  background-position: 45% 65%;
   position: relative;
 }
 #home::before {
@@ -262,11 +263,11 @@ section {
 }
 
 .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #45505b;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
 }
 .resume-item::before {
   content: "";

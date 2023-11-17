@@ -1,37 +1,46 @@
-import type { NextPage } from 'next'
-import { useEffect } from 'react'
-import Head from 'next/head'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import styles from '../styles/Home.module.css'
-import { useDispatch } from 'react-redux';
-import { About, Footer, Header, Experience, Poster, Resume, Skill, Certificate } from '../src/components'
-import { changeActive } from '../src/redux/reducers/active';
+import type { NextPage } from "next";
+import { useEffect } from "react";
+import Head from "next/head";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "../styles/Home.module.css";
+import { useDispatch } from "react-redux";
+import {
+  About,
+  Footer,
+  Header,
+  Experience,
+  Poster,
+  Resume,
+  Skill,
+  Certificate,
+} from "../src/components";
+import { changeActive } from "../src/redux/reducers/active";
 import { motion, useScroll } from "framer-motion";
 
 const Home: NextPage = () => {
-  const dispatch = useDispatch()
-  const { scrollYProgress } = useScroll()
+  const dispatch = useDispatch();
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
+      const sections = document.querySelectorAll("section[id]");
       const currentSection = Array.from(sections).find((section) => {
         const rect = section.getBoundingClientRect();
         return rect.top <= 0 && rect.bottom >= 0;
       });
       if (currentSection) {
-        dispatch(changeActive(`#${currentSection.id}`))
+        dispatch(changeActive(`#${currentSection.id}`));
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [dispatch])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [dispatch]);
   return (
     <div className={styles.container}>
       <Head>
@@ -41,10 +50,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <motion.div
+        {/* <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
-        />
+        /> */}
         <Header />
         <Poster />
         <About />
@@ -55,8 +64,7 @@ const Home: NextPage = () => {
         <Footer />
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
