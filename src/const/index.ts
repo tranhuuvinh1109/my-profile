@@ -11,6 +11,7 @@ import moment from "../../public/moment.png";
 import php from "../../public/projectphp.png";
 import netflix from "../../public/netflix.png";
 import traffic from "../../public/traffic.png";
+import zayly from "../../public/ZaylyAi.png";
 import cnn from "../../public/cnn.png";
 import expressJsFramework from "../../public/ExpressJsFramework.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -19,6 +20,13 @@ export type SocialItemType = {
   label: string;
   href: string;
   icon: IconDefinition;
+};
+
+export type ExperienceType = {
+  title: string;
+  time: string;
+  company: string;
+  details: string[];
 };
 
 export const socialList: SocialItemType[] = [
@@ -63,8 +71,8 @@ export const myProfile: ProfileType = {
     "Hello, I'm Huu Vinh. I'm a passionate developer. I thrive on challenges and enjoy finding innovative solutions. With a strong dedication to continuous learning, I strive to grow both personally and professionally. I believe in the power of collaboration and enjoy working in diverse teams to achieve remarkable results. Let's connect and explore new opportunities together!",
   birthday: "11 Sep 2002",
   phone: "+84 915 905 138",
-  age: 21,
-  email: "Tranhuuvinh1109@gmail.com",
+  age: 22,
+  email: "Vinhhuutran.developer@gmail.com",
   address: "HaTinh, VietNam",
 };
 
@@ -177,5 +185,37 @@ export const ProjectList: ProjectType[] = [
     description:
       "Traffic management system from city security cameras. Store images and media information using artificial intelligence.",
     dateTime: "11/11/2023",
+  },
+  {
+    name: "Zay AI",
+    link: "https://zayly.vercel.app/",
+    image: zayly,
+    description:
+      "ZaylyAI provides businesses with customized chatbots powered by OpenAI, tailored to each company's knowledge base, enhancing customer interactions and automating support.",
+    dateTime: "10/06/2024",
+  },
+];
+
+export const myExperience: ExperienceType[] = [
+  {
+    title: "Internship Frontend",
+    time: "May/2022 - Aug/2022",
+    company: "Sun Asterisk Company",
+    details: [
+      "Assuming the role of a Frontend Developer.",
+      "Meeting and discussing project requirements with the Project Manager.",
+      "Learn how to develop projects using the Scrum model.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    time: "Oct/2023 - Present",
+    company: "Ncc Asia Danang Company",
+    details: [
+      "Developing and maintaining web applications using ReactJS, NextJS, Webflow, and React Native.",
+      "Working on WordPress to customize and enhance website functionalities.",
+      "Interacting with Web3 technologies for decentralized applications.",
+      "Collaborating with cross-functional teams to deliver high-quality projects.",
+    ],
   },
 ];

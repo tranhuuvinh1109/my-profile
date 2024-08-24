@@ -29,10 +29,10 @@ const Portfolio: FC = () => {
               <Col
                 lg={4}
                 md={6}
-                className="portfolio-item filter-app mb-10"
+                className="portfolio-item filter-app mb-10 flex items-center"
                 key={index}
               >
-                <div className="portfolio-wrap flex justify-center ">
+                <div className="portfolio-wrap flex justify-center py-5 items-center">
                   <Image
                     src={project.image}
                     alt={project.name}
