@@ -124,52 +124,61 @@ export const skillList: SkillType[] = [
     value: 55,
   },
 ];
+
+export type PreviewProjectType = {
+  image?: string;
+  video?: React.ReactNode;
+  description: string;
+};
+
 export type ProjectType = {
   name: string;
   link: string;
   image: string | StaticImport;
   description?: string;
   dateTime?: string;
+  preview?: PreviewProjectType[];
 };
+
 export const ProjectList: ProjectType[] = [
-  {
-    name: "Moment Learning",
-    link: "https://moment-learning.vercel.app/",
-    image: moment,
-    dateTime: "01/06/2023",
-  },
-  {
-    name: "BackEnd Moment Learning",
-    link: "https://github.com/tranhuuvinh1109/BE_moment_learning",
-    image: php,
-    dateTime: "01/06/2023",
-  },
-  {
-    name: "Amazing Trip",
-    link: "https://amazing-trip.vercel.app/landing",
-    image: amazing,
-    dateTime: "10/10/2022",
-  },
-  {
-    name: "Funny Chat",
-    link: "https://funny-chat-app.vercel.app/",
-    image: funnychat,
-    dateTime: "10/06/2022",
-  },
-  {
-    name: "NetFlix Clone",
-    link: "https://vinh-netflix.vercel.app/",
-    image: netflix,
-    dateTime: "01/02/2023",
-  },
-  {
-    name: "NodeJS Course",
-    link: "https://github.com/tranhuuvinh1109/learning-nodejs",
-    image: expressJsFramework,
-    description:
-      " Here is the repository, let me teach basic node js with MVC model to my students",
-    dateTime: "01/05/2023",
-  },
+  // {
+  //   name: "Moment Learning",
+  //   link: "https://moment-learning.vercel.app/",
+  //   image: moment,
+  //   dateTime: "01/06/2023",
+  // },
+  // {
+  //   name: "BackEnd Moment Learning",
+  //   link: "https://github.com/tranhuuvinh1109/BE_moment_learning",
+  //   image: php,
+  //   dateTime: "01/06/2023",
+  // },
+  // {
+  //   name: "Amazing Trip",
+  //   link: "https://amazing-trip.vercel.app/landing",
+  //   image: amazing,
+  //   dateTime: "10/10/2022",
+  // },
+  // {
+  //   name: "Funny Chat",
+  //   link: "https://funny-chat-app.vercel.app/",
+  //   image: funnychat,
+  //   dateTime: "10/06/2022",
+  // },
+  // {
+  //   name: "NetFlix Clone",
+  //   link: "https://vinh-netflix.vercel.app/",
+  //   image: netflix,
+  //   dateTime: "01/02/2023",
+  // },
+  // {
+  //   name: "NodeJS Course",
+  //   link: "https://github.com/tranhuuvinh1109/learning-nodejs",
+  //   image: expressJsFramework,
+  //   description:
+  //     " Here is the repository, let me teach basic node js with MVC model to my students",
+  //   dateTime: "01/05/2023",
+  // },
   {
     name: "CNN Create model AI",
     link: "https://cnn-create-model-machine-learning.vercel.app/",
@@ -177,6 +186,28 @@ export const ProjectList: ProjectType[] = [
     description:
       " Here is the repository, You can create an image classification model based on your custom dataset. The system will help you train the model completely automatically",
     dateTime: "01/11/2023",
+    preview: [
+      {
+        image: "/cnn.jpg",
+        description: "Zay AI",
+      },
+      {
+        image: "/cnn2.jpg",
+        description: "Zay AI",
+      },
+      {
+        image: "/cnn3.jpg",
+        description: "Zay AI",
+      },
+      {
+        image: "/cnn4.jpg",
+        description: "Zay AI",
+      },
+      {
+        image: "/cnn5.jpg",
+        description: "Zay AI",
+      },
+    ],
   },
   {
     name: "Traffic Detech",
@@ -193,6 +224,32 @@ export const ProjectList: ProjectType[] = [
     description:
       "ZaylyAI provides businesses with customized chatbots powered by OpenAI, tailored to each company's knowledge base, enhancing customer interactions and automating support.",
     dateTime: "10/06/2024",
+    preview: [
+      {
+        image: "/zaylyAi.jpg",
+        description: "Zay AI",
+      },
+      {
+        image: "/ZayluAi2.png",
+        description: "Zay AI",
+      },
+      {
+        image: "/ZayluAi3.png",
+        description: "Zay AI",
+      },
+      {
+        image: "/ZayluAi4.png",
+        description: "Zay AI",
+      },
+      {
+        image: "/ZayluAi5.png",
+        description: "Zay AI",
+      },
+      {
+        image: "/ZayluAi6.png",
+        description: "Zay AI",
+      },
+    ],
   },
 ];
 
