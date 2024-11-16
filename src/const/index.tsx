@@ -12,6 +12,7 @@ import php from "../../public/projectphp.png";
 import netflix from "../../public/netflix.png";
 import traffic from "../../public/traffic.png";
 import zayly from "../../public/ZaylyAi.png";
+import vcare from "../../public/V-care.png";
 import cnn from "../../public/cnn.png";
 import expressJsFramework from "../../public/ExpressJsFramework.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -138,6 +139,7 @@ export type ProjectType = {
   description?: string;
   dateTime?: string;
   preview?: PreviewProjectType[];
+  video?: React.ReactNode;
 };
 
 export const ProjectList: ProjectType[] = [
@@ -179,6 +181,48 @@ export const ProjectList: ProjectType[] = [
   //     " Here is the repository, let me teach basic node js with MVC model to my students",
   //   dateTime: "01/05/2023",
   // },
+  {
+    name: "V-Care",
+    link: "https://vcare-seven.vercel.app/",
+    image: vcare,
+    description:
+      "This project is a web-based platform designed to assist users in identifying skin conditions and diseases using advanced AI technology. By leveraging a trained AI model, the system provides detailed insights and treatment recommendations to enhance user health and well-being.",
+    dateTime: "10/07/2024",
+    video: (
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Ez1Kl3vqr4w?si=waOuDytwwCJRIasb"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
+    // preview: [
+    //   {
+    //     image: "/cnn.jpg",
+    //     description: "Zay AI",
+    //   },
+    //   {
+    //     image: "/cnn2.jpg",
+    //     description: "Zay AI",
+    //   },
+    //   {
+    //     image: "/cnn3.jpg",
+    //     description: "Zay AI",
+    //   },
+    //   {
+    //     image: "/cnn4.jpg",
+    //     description: "Zay AI",
+    //   },
+    //   {
+    //     image: "/cnn5.jpg",
+    //     description: "Zay AI",
+    //   },
+    // ],
+  },
   {
     name: "CNN Create model AI",
     link: "https://cnn-create-model-machine-learning.vercel.app/",

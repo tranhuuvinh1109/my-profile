@@ -23,6 +23,7 @@ const Project = ({ data }: ProjectProps) => {
             </div>
             <h1 className=" text-3xl font-semibold">{project.name}</h1>
             <p className=" max-w-[600px] font-medium">{project.description}</p>
+            {project.video && project.video}
             <div className="grid grid-cols-2 gap-4">
               {project.preview?.map((item, itemIndex) => {
                 return (

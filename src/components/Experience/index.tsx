@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "@mui/icons-material";
-import Image from "next/image";
+import { Container } from "react-bootstrap";
 import { ProjectList } from "../../const";
+import Project from "../Project";
 
 const Portfolio: FC = () => {
   return (
@@ -20,39 +19,7 @@ const Portfolio: FC = () => {
             skills and thrive in diverse work environments.
           </p>
         </div>
-        <Row className="portfolio-container">
-          {ProjectList.sort(
-            (a, b) =>
-              new Date(b.dateTime!).getTime() - new Date(a.dateTime!).getTime()
-          ).map((project, index) => {
-            return (
-              <Col
-                lg={4}
-                md={6}
-                className="portfolio-item filter-app mb-10 flex items-center"
-                key={index}
-              >
-                <div className="portfolio-wrap flex justify-center py-5 items-center">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    className="w-[60%]"
-                  />
-                  <div className="portfolio-info">
-                    <h4>{project.name}</h4>
-                    {project.description && <p>{project.description}</p>}
-                    <p>Website</p>
-                    <div className="portfolio-links">
-                      <a href={project.link} target="_blank">
-                        <Link />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
+        <Project data={ProjectList} />
       </Container>
     </section>
   );

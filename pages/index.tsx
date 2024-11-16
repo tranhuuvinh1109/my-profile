@@ -17,8 +17,7 @@ import {
   Project,
 } from "../src/components";
 import { changeActive } from "../src/redux/reducers/active";
-import { motion, useScroll } from "framer-motion";
-import { ProjectList } from "../src/const";
+import { useScroll } from "framer-motion";
 
 const Home: NextPage = () => {
   const dispatch = useDispatch();
@@ -63,7 +62,6 @@ const Home: NextPage = () => {
         <Skill />
         <Certificate />
         <Experience />
-        <Project data={ProjectList} />
         <Footer />
       </main>
     </div>
